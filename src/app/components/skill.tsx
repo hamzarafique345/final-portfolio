@@ -12,16 +12,16 @@ export default function Skill() {
   
     <section  className="text-gray-600 bg-slate-800 body-font">
 
-    <div className="container px-5 py-24 mx-auto">
+    <div className="container px-5 pt-10 pb-6 mx-auto">
       <div className="text-center mb-20">
-      <h1 className="text-3xl  bg-gray-800 font-bold text-cyan-400 font-serif  underline inline border shadow-lg  shadow-white rounded-full  p-0 py-2 px-9">
+      <h1 className="text-3xl  bg-gray-800 font-bold text-cyan-400 font-serif  underline inline border shadow-lg  shadow-white rounded-full  p-0 p-2 px-9">
                 My Skills
               </h1>
         <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
        
         </p>
       </div>
-      <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
+      <div className="flex flex-wrap  lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
         <div className="p-2 sm:w-1/2 w-full">
           <div className="bg-gray-100 rounded flex p-4 h-full items-center">
             <svg
@@ -136,7 +136,7 @@ export default function Skill() {
   
   
   <section>
-    <div className="container px-2 py8 mx-auto flex flex-wrap flex justify-center space-x-8 text-2xl">
+    <div className="container px-2 py-1 mx-auto flex flex-wrap flex justify-center space-x-8 text-2xl">
   {/*Icon */}
   
   
@@ -180,10 +180,10 @@ export default function Skill() {
   <IoLogoJavascript/>
   <span className="mt-2 text-lg text-black ">Javascript</span>
   </div>
-      <button className="flex mx-auto mt-16 text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-lg">
+  
+    </div>    <button className="flex mx-auto mt-6 text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-lg">
         Read More
       </button>
-    </div>
   </section>
   
   

@@ -1,18 +1,22 @@
+
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
 export default function Nav() {
   return (
-    <div>
+    <div className="text-grey-600 body-font bg-slate-700">
          <title>Portfolio</title>
-      <header className="text-grey-600 body-font bg-slate-700">
+
         <div className="flex flex-wrap p-2 ml-16  flex-col md:flex-row items-center bg ">
           <a className="flex mb-1 titlefont font-medium items-center text-grey-900 mb-1 md:mb ">
-            <img
-              src="https://media.licdn.com/dms/image/v2/D5603AQE-lhyBUpPYQg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1710336293886?e=1729728000&v=beta&t=L4oz5qaZc6hehebYaGMDoPwbNKdR-yxgUdgYlSyEBwQ"
+            <Image
+           width={100}
+           height={100}
+              src="https://media.licdn.com/dms/image/v2/D5603AQE-lhyBUpPYQg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1710336293886?e=1733356800&v=beta&t=2c6MXB_Pc29TBv8o5Mw47jdBWxwq9qM1MYii1aq-qkw"
               alt="logo"
               className="w-10 h-10 rounded-full"
-            />
+            ></Image>
             <span  className="ml-3 text-xl text-white">Hamza Rafique |</span>
           </a>
 
@@ -48,19 +52,8 @@ export default function Nav() {
 
           {/* Button Section */}
 
-          <div className="flex  space-x-4 mt-4 md:mt-0 md:mr-auto ">
-            <input
-              className="bg-white-100 border rounded-xl p-0 px-1 pl-2 "
-              type="text"
-              placeholder="Search Here       
-              
-              "
-              
-            />
-          
-          </div>
-
           <div className="flex space-x-4 mt-4 md:mt-0  ">
+            
             <button className=" inline-flex item-center  rounded-2xl bg-cyan-400 text-white border-0 py-1 px-6 focus:outline-none hover:bg-purple-500  rounded text base">
               Login
             </button>
@@ -72,7 +65,7 @@ export default function Nav() {
           </div>
         </div>
         <hr />
-      </header>
+    
     </div>
   )
 }

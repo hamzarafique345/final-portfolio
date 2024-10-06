@@ -1,4 +1,4 @@
-import Image from "next/image"
+
 import MyHome from "./components/home";
 
 export default function Home() {
