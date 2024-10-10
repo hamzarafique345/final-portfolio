@@ -110,7 +110,7 @@ export default function Team() {
         </a>
         <div className="p-5">
           <h3 className="text-xl font-bold tracking-tight text-cyan-500  dark:text-white">
-            <a href="#">Dua</a>
+            <a href="#">Fiza</a>
           </h3> 
           <span className="text-yellow-400 font-bold text-xl  dark:text-gray-400">
           <Typewriter

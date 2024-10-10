@@ -5,10 +5,10 @@ import React from 'react'
 
 export default function Nav() {
   return (
-    <div className="text-grey-600 body-font bg-slate-700">
+    <div className="text-grey-600 bg-slate-700">
          <title>Portfolio</title>
 
-        <div className="flex flex-wrap p-2 ml-16  flex-col md:flex-row items-center bg ">
+        <div className="flex flex-wrap p-2 ml-1  flex-col md:flex-row   md:justify-center items-center bg ">
           <a className="flex mb-1 titlefont font-medium items-center text-grey-900 mb-1 md:mb ">
             <Image
            width={100}
@@ -32,7 +32,9 @@ export default function Nav() {
             <Link className=" text-white mr-5 hover:text-orange-500   hover:font-bold" href="./Skills">
               Skill
               </Link>
-
+              <Link className=" text-white mr-5 hover:text-purple-500   hover:font-bold" href="./projects">
+              Project
+              </Link>
              <Link className=" text-white mr-5 hover:text-orange-500   hover:font-bold
 " href="./Team">
               Team
@@ -52,13 +54,12 @@ export default function Nav() {
 
           {/* Button Section */}
 
-          <div className="flex space-x-4 mt-4 md:mt-0  ">
+          <div className=" space-x-4 mt-6 md:mt-0 ">
             
             <button className=" inline-flex item-center  rounded-2xl bg-cyan-400 text-white border-0 py-1 px-6 focus:outline-none hover:bg-purple-500  rounded text base">
               Login
             </button>
-          </div>
-          <div className="flex space-x-4 mt-4 md:mt-0">
+        
             <button className="inline-flex item-center rounded-2xl bg-orange-400 text-white border-0 py-1 ml-1 px-6 focus:outline-none hover:bg-yellow-400 rounded text base">
               Sign Up
             </button>
