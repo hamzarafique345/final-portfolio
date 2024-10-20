@@ -38,7 +38,7 @@ export default function MyHome () {
 <button
   className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold py-3 px-10 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out"
 >
-  Hire Me
+  <a href='https://www.linkedin.com/in/hamza-rafiq-5120752b8/'>Hire Me</a>
 </button>
 
      
@@ -63,41 +63,46 @@ export default function MyHome () {
         </div>
 
       </div>
-      <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 ">
+      <div className="lg:max-w-lg lg:w-full md:w-1/2  ">
         <Image
         width={750}
         height={750}
-          className="object-cover ml-30 h-[450px] w-[450px] object-center rounded-full shadow-xl shadow-slate-900 "
+          className="object-cover ml-30 h-[450px] w-[450px] object-center rounded-full  shadow-2xl shadow-black "
           alt="hero"
           src="/one.jpg"
         ></Image>
-         <div className="flex mt-16  object-cover object-center justify-center items-center h-full">
-          
-          <button
-            className="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
-            type="button"
-          >
-           <a href='https://www.facebook.com/'>Facebook</a> 
-          </button>
-          <button
-            className="text-white bg-gradient-to-r from-red-500 via-red-600 to-red-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
-            type="button"
-          >
-            <a href='https://www.youtube.com'>YouTube</a>
-          </button>
-          <button
-            className="text-white bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-400/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
-            type="button"
-          >
-            <a href=''>Twitter</a>
-          </button>
-          <button
-            className="text-white bg-gradient-to-r from-pink-500 via-pink-600 to-pink-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 shadow-lg shadow-pink-500/50 dark:shadow-lg dark:shadow-pink-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
-            type="button"
-          >
-            <a href="https://www.instagram.com/hamza.rafique.5836711/?hl=en">Instagram</a>
-          </button>
-        </div>
+
+
+<div className="flex flex-wrap md:flex-nowrap mt-16 object-cover object-center justify-center items-center h-full space-x-2 space-y-2">
+  <button
+    className="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center w-full sm:w-auto"
+    type="button"
+  >
+    <a href='https://www.facebook.com/'>Facebook</a>
+  </button>
+  
+  <button
+    className="text-white bg-gradient-to-r from-red-500 via-red-600 to-red-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center w-full sm:w-auto"
+    type="button"
+  >
+    <a href='https://www.youtube.com'>YouTube</a>
+  </button>
+  
+  <button
+    className="text-white bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-400/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center w-full sm:w-auto"
+    type="button"
+  >
+    <a href=''>Twitter</a>
+  </button>
+  
+  <button
+    className="text-white bg-gradient-to-r from-pink-500 via-pink-600 to-pink-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 shadow-lg shadow-pink-500/50 dark:shadow-lg dark:shadow-pink-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center w-full sm:w-auto"
+    type="button"
+  >
+    <a href="https://www.instagram.com/hamza.rafique.5836711/?hl=en">Instagram</a>
+  </button>
+</div>
+
       </div>
     </div>
 

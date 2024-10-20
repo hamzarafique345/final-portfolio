@@ -1,73 +1,59 @@
 
-import Image from 'next/image'
-import Link from 'next/link'
-import React from 'react'
+import Image from 'next/image';
+import Link from 'next/link';
+import React from 'react';
 
 export default function Nav() {
   return (
-    <div className="text-grey-600 bg-slate-700">
-         <title>Portfolio</title>
+    <div className="bg-gradient-to-r from-gray-800 to-black shadow-lg">
+      <div className="flex flex-col md:flex-row justify-between items-center p-4">
 
-        <div className="flex flex-wrap p-2 ml-1  flex-col md:flex-row   md:justify-center items-center bg ">
-          <a className="flex mb-1 titlefont font-medium items-center text-grey-900 mb-1 md:mb ">
-            <Image
-           width={100}
-           height={100}
-              src="https://media.licdn.com/dms/image/v2/D5603AQE-lhyBUpPYQg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1710336293886?e=1733356800&v=beta&t=2c6MXB_Pc29TBv8o5Mw47jdBWxwq9qM1MYii1aq-qkw"
-              alt="logo"
-              className="w-10 h-10 rounded-full"
-            ></Image>
-            <span  className="ml-3 text-xl text-white">Hamza Rafique |</span>
-          </a>
+        {/* Logo Section */}
+        <a className="flex items-center mb-2 md:mb-0">
+          <Image
+            width={40}
+            height={40}
+            src="https://media.licdn.com/dms/image/v2/D5603AQE-lhyBUpPYQg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1710336293886?e=1733356800&v=beta&t=2c6MXB_Pc29TBv8o5Mw47jdBWxwq9qM1MYii1aq-qkw"
+            alt="logo"
+            className="w-10 h-10 rounded-full transition-transform duration-300 hover:scale-110"
+          />
+          <span className="ml-2 text-lg md:text-2xl text-white font-bold transition duration-300 transform hover:translate-x-1">
+            Hamza Rafique
+          </span>
+        </a>
 
-          {/* Nav Section */}
-
-          <nav className=" md:mr-auto md:ml-4 md:py-1   m font-serif <hr />d:pl-14 md:border-1 md:border-grey-400 flex flex-wrap items center text-base justify-center">
-            <Link className=" text-white ml- mr-5 hover:text-red-500 hover:font-bold" href="/">
-              Home
-            </Link>
-            <Link className=" text-white mr-5 hover:text-blue-500  hover:font-bold" href="./About">
-              About
-            </Link>
-            <Link className=" text-white mr-5 hover:text-orange-500   hover:font-bold" href="./Skills">
-              Skill
-              </Link>
-              <Link className=" text-white mr-5 hover:text-purple-500   hover:font-bold" href="./projects">
-              Project
-              </Link>
-             <Link className=" text-white mr-5 hover:text-orange-500   hover:font-bold
-" href="./Team">
-              Team
-              </Link>
-            <Link className=" text-white mr-5 hover:text-green-500    hover:font-bold" href="./Contact">
-              Contact Us
-            </Link>
-           
+        {/* Navigation Links */}
+        <nav className="flex flex-wrap justify-center items-center mt-2 md:mt-0 space-x-3">
+          {[
+            { name: 'Home', href: '/', hoverColor: 'hover:text-red-500' },
+            { name: 'About', href: './About', hoverColor: 'hover:text-green-500' },
+            { name: 'Skills', href: './Skills', hoverColor: 'hover:text-blue-500' },
+            { name: 'Projects', href: './projects', hoverColor: 'hover:text-purple-500' },
+            { name: 'Team', href: './Team', hoverColor: 'hover:text-purple-500' },
+            { name: 'Contact', href: './Contact', hoverColor: 'hover:text-yellow-500' },
+            { name: 'Privacy Policy', href: '../Privacy_Privacy', hoverColor: 'hover:text-orange-500' },
+          ].map((item, index) => (
             <Link
-              className=" text-white mr-5 hover:text-pink-500 hover:font-bold
-"
-              href="../Privacy_Privacy"
+              key={index}
+              className={`text-white font-bold text-base md:text-lg ${item.hoverColor} transition duration-300 relative`}
+              href={item.href}
             >
-              Privacy Policy
+              {item.name}
+              <span className="absolute inset-x-0 bottom-0 h-0.5 bg-white transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100" />
             </Link>
-          </nav>
+          ))}
+        </nav>
 
-          {/* Button Section */}
-
-          <div className=" space-x-4 mt-6 md:mt-0 ">
-            
-            <button className=" inline-flex item-center  rounded-2xl bg-cyan-400 text-white border-0 py-1 px-6 focus:outline-none hover:bg-purple-500  rounded text base">
-              Login
-            </button>
-        
-            <button className="inline-flex item-center rounded-2xl bg-orange-400 text-white border-0 py-1 ml-1 px-6 focus:outline-none hover:bg-yellow-400 rounded text base">
-              Sign Up
-            </button>
-          </div>
+        {/* Buttons */}
+        <div className="flex space-x-2 mt-2 md:mt-0">
+          <button className="bg-blue-500 text-white font-bold text-base md:text-lg px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300 transform hover:scale-105 shadow-md hover:shadow-xl">
+            Login
+          </button>
+          <button className="bg-orange-500 text-white font-bold text-base md:text-lg px-4 py-2 rounded-md hover:bg-orange-600 transition duration-300 transform hover:scale-105 shadow-md hover:shadow-xl">
+            Sign Up
+          </button>
         </div>
-        <hr />
-    
+      </div>
     </div>
-  )
+  );
 }
-
