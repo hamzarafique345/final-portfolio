@@ -1,65 +1,204 @@
 "use client";
-import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { FaCode, FaLaptopCode, FaServer, FaDatabase } from "react-icons/fa";
 
 export default function About() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2 }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 }
+    }
+  };
+
   return (
-    <div className="relative isolate overflow-hidden bg-gray-900 py-20">
-      <Image
-        src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-y=.8&w=2830&h=1500&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply"
-        alt="Background"
-        width={800}
-        height={800}
-        className="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center opacity-30 transition-opacity duration-300"
-      />
-      <div className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl">
-        <div
-          className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"
-          style={{
-            clipPath:
-              "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-          }}
-        />
-      </div>
-      <div className="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu">
-        <div
-          className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"
-          style={{
-            clipPath:
-              "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-          }}
-        />
-      </div>
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+    <section className="py-20 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
+      <div className="container px-4 mx-auto max-w-7xl">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 mb-4">
             About Me
           </h2>
-          <p className="mt-6 text-lg leading-8 text-gray-300 transition duration-500 hover:scale-105 hover:text-gray-100">
-            Hello! I am a passionate learner transitioning from a medical background to the dynamic world of IT. After completing my intermediate in medical studies, I discovered my true passion for technology and decided to take a bold step into the field of Information Technology. I am currently enrolled in the prestigious Governor Initiative program, where I have successfully completed my first quarter. With the guidance and support of my mentor, Mehak Alamgir, I am now diving deeper into the second quarter, focusing on mastering Next.js.
-            <br />
-            <br />
-            Through hard work and perseverance, I haveve overcome challenges and embraced the journey of continuous learning in web development. I am excited about the future and committed to making a meaningful impact in the IT industry.
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            A passionate developer with a unique journey from medical studies to technology
           </p>
-        </div>
-        <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
-          <dl className="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              { label: "Skills", value: "15 +" },
-              { label: "Projects", value: "20+" },
-              { label: "Hours per Week", value: "60+" },
-              { label: "Paid Time Off", value: "Unlimited" },
-            ].map((item, index) => (
-              <div className="flex flex-col-reverse transition-transform duration-300 transform hover:scale-105" key={index}>
-                <dt className="text-base leading-7 text-gray-300">{item.label}</dt>
-                <dd className="text-2xl font-bold leading-9 tracking-tight text-white">
-                  {item.value}
-                </dd>
+        </motion.div>
+
+        {/* Main Content */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+          {/* Image Section */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="relative flex justify-center items-center"
+          >
+            <div className="relative w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden group">
+              {/* Simple Background Glow */}
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-2xl blur-2xl opacity-20" />
+              
+              {/* Main Image Container */}
+              <div className="relative h-full w-full rounded-2xl overflow-hidden bg-gradient-to-b from-slate-800/20 to-slate-900/20 backdrop-blur-[2px]">
+                <div className="relative h-full w-full flex items-center justify-center">
+                  <Image
+                    src="/one.png"
+                    alt="Profile"
+                    fill
+                    className="object-contain transition-all duration-500 hover:scale-[1.02]"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    quality={100}
+                    priority
+                    style={{
+                      objectFit: 'contain',
+                      objectPosition: 'center center',
+                      transform: 'scale(1.3)',
+                    }}
+                  />
+                </div>
+                
+                {/* Clean Border */}
+                <div className="absolute inset-0 rounded-2xl border border-blue-400/10" />
               </div>
-            ))}
-          </dl>
+
+              {/* Minimal Floating Elements */}
+              <motion.div
+                animate={{
+                  y: [0, -10, 0],
+                  x: [0, 10, 0],
+                }}
+                transition={{
+                  duration: 5,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+                className="absolute -top-3 -right-3 w-14 h-14 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-full backdrop-blur-sm border border-blue-400/10"
+              />
+              <motion.div
+                animate={{
+                  y: [0, 10, 0],
+                  x: [0, -10, 0],
+                }}
+                transition={{
+                  duration: 6,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+                className="absolute -bottom-3 -left-3 w-16 h-16 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-full backdrop-blur-sm border border-cyan-400/10"
+              />
+
+              {/* Subtle Light Effect */}
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/10 via-transparent to-transparent" />
+            </div>
+          </motion.div>
+
+          {/* Text Content */}
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            className="space-y-6"
+          >
+            <motion.div variants={itemVariants}>
+              <h3 className="text-2xl font-bold text-white mb-4">My Journey</h3>
+              <p className="text-gray-400 leading-relaxed">
+                After completing my intermediate in medical studies, I discovered my true passion 
+                for technology and made a bold transition into web development. This unique 
+                background gives me a distinctive perspective in problem-solving and creating 
+                user-centric solutions.
+              </p>
+            </motion.div>
+
+            <motion.div variants={itemVariants}>
+              <h3 className="text-2xl font-bold text-white mb-4">What I Do</h3>
+              <p className="text-gray-400 leading-relaxed">
+                I specialize in building modern web applications using cutting-edge technologies. 
+                My focus is on creating performant, accessible, and user-friendly experiences 
+                that solve real-world problems.
+              </p>
+            </motion.div>
+
+            <motion.div variants={itemVariants}>
+              <h3 className="text-2xl font-bold text-white mb-4">My Approach</h3>
+              <p className="text-gray-400 leading-relaxed">
+                I believe in continuous learning and staying updated with the latest technologies. 
+                My medical background has instilled in me a detail-oriented approach and a deep 
+                understanding of user needs.
+              </p>
+            </motion.div>
+          </motion.div>
         </div>
+
+        {/* Stats Section */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20"
+        >
+          {[
+            { icon: <FaCode />, count: "20+", label: "Projects Completed" },
+            { icon: <FaLaptopCode />, count: "15+", label: "Technologies" },
+            { icon: <FaServer />, count: "5+", label: "APIs Built" },
+            { icon: <FaDatabase />, count: "10+", label: "Databases Managed" },
+          ].map((stat, index) => (
+            <motion.div
+              key={index}
+              variants={itemVariants}
+              className="p-6 bg-slate-800/50 rounded-xl backdrop-blur-sm border border-slate-700/50 text-center"
+            >
+              <div className="text-3xl text-blue-400 mb-4">{stat.icon}</div>
+              <div className="text-3xl font-bold text-white mb-2">{stat.count}</div>
+              <div className="text-gray-400">{stat.label}</div>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
-    </div>
+
+      {/* Add this to your global styles or in a style tag */}
+      <style jsx global>{`
+        @keyframes shine {
+          0% {
+            opacity: 0.5;
+            transform: rotate(0deg) scale(1);
+          }
+          50% {
+            opacity: 0.7;
+            transform: rotate(180deg) scale(1.1);
+          }
+          100% {
+            opacity: 0.5;
+            transform: rotate(360deg) scale(1);
+          }
+        }
+        
+        .animate-shine {
+          animation: shine 10s infinite;
+        }
+
+        @keyframes float {
+          0%, 100% { transform: translateY(0px) rotate(0deg); }
+          50% { transform: translateY(-20px) rotate(10deg); }
+        }
+
+        .animate-float {
+          animation: float 6s ease-in-out infinite;
+        }
+      `}</style>
+    </section>
   );
 }

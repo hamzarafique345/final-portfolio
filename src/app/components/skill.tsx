@@ -1,284 +1,171 @@
-// "use client"
-// import React from 'react'
-// import { DiHtml5 } from "react-icons/di";
-// import { SiCss3 } from "react-icons/si";
-// import { SiTypescript } from "react-icons/si";
-// import { RiNextjsFill } from "react-icons/ri";
-// import { SiTailwindcss } from "react-icons/si";
-// import { IoLogoJavascript } from "react-icons/io";
-// import Typewriter from "typewriter-effect";
-// export default function Skill() {
-//   return (
-  
-//     <section  className="text-gray-600 bg-slate-800 body-font">
-
-//     <div className="container px-5 pt-10 pb-16 mx-auto">
-//       <div className="text-center mb-20">
-//       <h1 className="text-3xl  bg-gray-800 font-bold text-cyan-400 font-serif  underline inline border shadow-lg  shadow-white rounded-full  p-0 p-2 px-9">
-//                 My Skills
-//               </h1>
-//         <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
-       
-//         </p>
-//       </div>
-//       <div className="flex flex-wrap  lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
-//         <div className="p-2 sm:w-1/2 w-full">
-//           <div className="bg-gray-100 rounded flex p-4 h-full items-center">
-//             <svg
-//               fill="none"
-//               stroke="currentColor"
-//               strokeLinecap="round"
-//               strokeLinejoin="round"
-//               strokeWidth={3}
-//               className="text-red-500 w-6 h-6 flex-shrink-0 mr-4"
-//               viewBox="0 0 24 24"
-//             >
-//               <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
-//               <path d="M22 4L12 14.01l-3-3" />
-//             </svg>
-//             <span className="title-font uppercase font-medium">
-//               Html : <strong> 95%</strong>
-//             </span>
-//           </div>
-//         </div>
-//         <div className="p-2 sm:w-1/2 w-full">
-//           <div className="bg-gray-100 rounded flex p-4 h-full items-center">
-//             <svg
-//               fill="none"
-//               stroke="currentColor"
-//               strokeLinecap="round"
-//               strokeLinejoin="round"
-//               strokeWidth={3}
-//               className="text-red-500 w-6 h-6 flex-shrink-0 mr-4"
-//               viewBox="0 0 24 24"
-//             >
-//               <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
-//               <path d="M22 4L12 14.01l-3-3" />
-//             </svg>
-//             <span className="title-font uppercase font-medium">
-//              Css :  <strong>70%</strong>
-//             </span>
-//           </div>
-//         </div>
-//         <div className="p-2 sm:w-1/2 w-full">
-//           <div className="bg-gray-100 rounded flex p-4 h-full items-center">
-//             <svg
-//               fill="none"
-//               stroke="currentColor"
-//               strokeLinecap="round"
-//               strokeLinejoin="round"
-//               strokeWidth={3}
-//               className="text-red-500 w-6 h-6 flex-shrink-0 mr-4"
-//               viewBox="0 0 24 24"
-//             >
-//               <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
-//               <path d="M22 4L12 14.01l-3-3" />
-//             </svg>
-//             <span className="title-font uppercase font-medium">Typescript : <strong>90%</strong></span>
-//           </div>
-//         </div>
-//         <div className="p-2 sm:w-1/2 w-full">
-//           <div className="bg-gray-100 rounded flex p-4 h-full items-center">
-//             <svg
-//               fill="none"
-//               stroke="currentColor"
-//               strokeLinecap="round"
-//               strokeLinejoin="round"
-//               strokeWidth={3}
-//               className="text-red-500 w-6 h-6 flex-shrink-0 mr-4"
-//               viewBox="0 0 24 24"
-//             >
-//               <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
-//               <path d="M22 4L12 14.01l-3-3" />
-//             </svg>
-//             <span className="title-font uppercase font-medium">
-//               Next.js : <strong>30%</strong>
-//             </span>
-//           </div>
-//         </div>
-//         <div className="p-2 sm:w-1/2 w-full">
-//           <div className="bg-gray-100 rounded flex p-4 h-full items-center">
-//             <svg
-//               fill="none"
-//               stroke="currentColor"
-//               strokeLinecap="round"
-//               strokeLinejoin="round"
-//               strokeWidth={3}
-//               className="text-red-500 w-6 h-6 flex-shrink-0 mr-4"
-//               viewBox="0 0 24 24"
-//             >
-//               <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
-//               <path d="M22 4L12 14.01l-3-3" />
-//             </svg>
-//             <span className="title-font uppercase font-medium">Tailwind Css: <strong>30%</strong></span>
-//           </div>
-//         </div>
-//         <div className="p-2 sm:w-1/2 w-full">
-//           <div className="bg-gray-100 rounded flex p-4 h-full items-center">
-//             <svg
-//               fill="none"
-//               stroke="currentColor"
-//               strokeLinecap="round"
-//               strokeLinejoin="round"
-//               strokeWidth={3}
-//               className="text-red-500 w-6 h-6 flex-shrink-0 mr-4"
-//               viewBox="0 0 24 24"
-//             >
-//               <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
-//               <path d="M22 4L12 14.01l-3-3" />
-//             </svg>
-//             <span className="title-font uppercase font-medium">Tailblock : <strong >100%</strong></span>
-//           </div>
-//         </div>
-//       </div>
-  
-//   {/*Development Tools And frame work */}
-  
-  
-//   <section>
-//     <div className="container px-2 py-1 mx-auto flex flex-wrap flex justify-center space-x-8 text-2xl">
-//   {/*Icon */}
-  
-  
-//   <div className="flex items-center">
-//                   <h1 className="title-font  font-black font-serif  sm:text-4xl text-2xl mb-4 font-bold text-amber-400">
-//                     <Typewriter
-//                       options={{
-//                         strings: ["My Programming ","Skill"],
-//                         autoStart: true,
-//                         loop: true,
-//                       }}
-//                     />
-//                   </h1>
-//                 </div>
-  
-//   <div className="flex border border-yellow-500 p-4 flex-col items-center text-red-500 text-6xl bg-white transition-transform duration-300 ease-in-out transform hover:scale-110">
-//   <DiHtml5 />
-//   <span className="mt-2 text-lg text-black ">Html</span>
-//   </div>
-  
-//   <div className="flex border border-yellow-500 p-4 flex-col items-center text-cyan-600 text-6xl bg-white transition-transform duration-300 ease-in-out transform hover:scale-110">
-//   <SiCss3/>
-//   <span className="mt-2 text-lg text-black ">Css</span>
-//   </div>
-  
-//   <div className="flex border border-yellow-500 p-4 flex-col items-center text-cyan-400 text-6xl bg-white transition-transform duration-300 ease-in-out transform hover:scale-110">
-//   <SiTypescript/>
-//   <span className="mt-2 text-lg text-black ">Typescript</span>
-//   </div>
-  
-//   <div className="flex border border-yellow-500 p-4 flex-col items-center text-black text-6xl bg-white transition-transform duration-300 ease-in-out transform hover:scale-110">
-//   <RiNextjsFill/>
-//   <span className="mt-2 text-lg text-black ">Next.js</span>
-//   </div>
-//   <div className="flex border border-yellow-500 p-4 flex-col items-center text-black text-6xl bg-white transition-transform duration-300 ease-in-out transform hover:scale-110">
-//   <SiTailwindcss />
-//   <span className="mt-2 text-lg text-black ">Tailwind Css</span>
-//   </div>
-  
-//   <div className="flex border border-yellow-500 p-4 flex-col items-center text-yellow-500 text-6xl bg-white transition-transform duration-300 ease-in-out transform hover:scale-110">
-//   <IoLogoJavascript/>
-//   <span className="mt-2 text-lg text-black ">Javascript</span>
-//   </div>
-  
-//     </div>    <button className="flex mx-auto mt-6 text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-lg">
-//         Read More
-//       </button>
-//   </section>
-  
-  
-//     </div>
-//   </section>
-  
-
-//   )
-// }
 "use client";
 import React from "react";
-import { DiHtml5 } from "react-icons/di";
-import { SiCss3, SiTypescript, SiTailwindcss } from "react-icons/si";
-import { RiNextjsFill } from "react-icons/ri";
-import { IoLogoJavascript } from "react-icons/io";
-import Typewriter from "typewriter-effect";
+import { motion } from "framer-motion";
+import {  SiTypescript, SiTailwindcss, SiSanity, SiFigma, SiFramer, SiVercel, SiGithub, SiReact, SiNextdotjs, SiNodedotjs, SiMongodb, SiFirebase } from "react-icons/si";
+import { FaCode, FaServer, FaDatabase, FaTools, FaPalette, FaBrain } from "react-icons/fa";
 
 export default function Skill() {
+  const skills = [
+    { name: "Frontend Development", level: "95%", category: "Development" },
+    { name: "Backend Development", level: "85%", category: "Development" },
+    { name: "UI/UX Design", level: "90%", category: "Design" },
+    { name: "Database Management", level: "80%", category: "Development" },
+    { name: "API Integration", level: "85%", category: "Development" },
+    { name: "Cloud Services", level: "75%", category: "Infrastructure" },
+  ];
+
+  const technologies = [
+    { 
+      category: "Frontend",
+      tools: [
+        { icon: <SiReact className="text-[#61DAFB]" />, name: "React" },
+        { icon: <SiNextdotjs className="text-white" />, name: "Next.js" },
+        { icon: <SiTypescript className="text-[#3178C6]" />, name: "TypeScript" },
+        { icon: <SiTailwindcss className="text-[#38B2AC]" />, name: "Tailwind" },
+        { icon: <SiFramer className="text-[#BB4AFF]" />, name: "Framer" },
+      ]
+    },
+    {
+      category: "Backend & Database",
+      tools: [
+        { icon: <SiNodedotjs className="text-[#339933]" />, name: "Node.js" },
+        { icon: <SiSanity className="text-[#F03E2F]" />, name: "Sanity" },
+        { icon: <SiMongodb className="text-[#47A248]" />, name: "MongoDB" },
+        { icon: <SiFirebase className="text-[#FFCA28]" />, name: "Firebase" },
+      ]
+    },
+    {
+      category: "Design & Tools",
+      tools: [
+        { icon: <SiFigma className="text-[#F24E1E]" />, name: "Figma" },
+        { icon: <SiVercel className="text-white" />, name: "Vercel" },
+        { icon: <SiGithub className="text-white" />, name: "GitHub" },
+      ]
+    }
+  ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.1 }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 }
+    }
+  };
+
   return (
-    <section className="text-gray-600 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 body-font">
-      <div className="container px-5 pt-10 pb-16 mx-auto">
-        <div className="text-center mb-20">
-          <h1 className="text-4xl bg-gray-800 font-extrabold text-cyan-400 font-serif underline inline border shadow-lg shadow-cyan-500 rounded-full p-4 px-12 transition duration-500 hover:text-white hover:bg-cyan-400 hover:shadow-white">
-            My Skills
-          </h1>
-        </div>
-        <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
-          {[
-            { skill: "Html", level: "95%" },
-            { skill: "Css", level: "70%" },
-            { skill: "Typescript", level: "90%" },
-            { skill: "Next.js", level: "30%" },
-            { skill: "Tailwind Css", level: "30%" },
-            { skill: "Tailblock", level: "100%" },
-          ].map(({ skill, level }, index) => (
-            <div key={index} className="p-2 sm:w-1/2 w-full">
-              <div className="bg-gradient-to-r from-gray-200 to-gray-300 rounded-lg flex p-6 h-full items-center shadow-lg hover:shadow-cyan-400 transition-shadow duration-300">
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={3}
-                  className="text-red-500 w-6 h-6 flex-shrink-0 mr-4"
-                  viewBox="0 0 24 24"
+    <section className="py-20 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
+      <div className="container px-4 mx-auto max-w-7xl">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 mb-4">
+            Technical Skills
+          </h2>
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            Proficient in modern web technologies and frameworks, with expertise in both frontend and backend development.
+          </p>
+        </motion.div>
+
+        {/* Technologies by Category */}
+        {technologies.map((category, categoryIndex) => (
+          <div key={categoryIndex} className="mb-20">
+            <h3 className="text-2xl font-bold text-white text-center mb-10">
+              {category.category}
+            </h3>
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6"
+            >
+              {category.tools.map((tech, index) => (
+                <motion.div
+                  key={index}
+                  variants={itemVariants}
+                  whileHover={{ scale: 1.05 }}
+                  className="flex flex-col items-center justify-center p-6 bg-slate-800/50 rounded-xl backdrop-blur-sm border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 group"
                 >
-                  <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
-                  <path d="M22 4L12 14.01l-3-3" />
-                </svg>
-                <span className="title-font uppercase font-medium text-lg text-gray-800">
-                  {skill} : <strong className="text-cyan-500">{level}</strong>
-                </span>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Development Tools And Framework */}
-        <section>
-          <div className="container px-2 py-6 mx-auto flex flex-wrap justify-center space-x-8 text-2xl">
-            {/* Typewriter Animation */}
-            <div className="flex items-center">
-              <h1 className="title-font font-black font-serif sm:text-4xl text-3xl mb-4 font-bold text-amber-400 animate-pulse">
-                <Typewriter
-                  options={{
-                    strings: ["My Programming", "Skills"],
-                    autoStart: true,
-                    loop: true,
-                  }}
-                />
-              </h1>
-            </div>
-
-            {/* Skill Icons with Hover Effects */}
-            {[
-              { icon: <DiHtml5 />, name: "Html", color: "text-red-500" },
-              { icon: <SiCss3 />, name: "Css", color: "text-cyan-600" },
-              { icon: <SiTypescript />, name: "Typescript", color: "text-blue-500" },
-              { icon: <RiNextjsFill />, name: "Next.js", color: "text-black" },
-              { icon: <SiTailwindcss />, name: "Tailwind Css", color: "text-blue-400" },
-              { icon: <IoLogoJavascript />, name: "Javascript", color: "text-yellow-500" },
-            ].map(({ icon, name, color }, index) => (
-              <div
-                key={index}
-                className={`flex border border-yellow-500 p-4 flex-col items-center ${color} text-6xl bg-white shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-110 hover:bg-gray-100 hover:shadow-cyan-400`}
-              >
-                {icon}
-                <span className="mt-2 text-lg text-black">{name}</span>
-              </div>
-            ))}
+                  <div className="text-5xl mb-3 transform group-hover:scale-110 transition-transform duration-300">
+                    {tech.icon}
+                  </div>
+                  <span className="text-gray-300 font-medium">{tech.name}</span>
+                </motion.div>
+              ))}
+            </motion.div>
           </div>
-          <button className="flex mx-auto mt-6 text-white bg-red-500 border-0 py-3 px-10 rounded-lg shadow-lg hover:bg-red-600 focus:outline-none transition duration-300">
-            Read More
-          </button>
-        </section>
+        ))}
+
+        {/* Skills Progress Bars */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20"
+        >
+          {skills.map((skill, index) => (
+            <motion.div
+              key={index}
+              variants={itemVariants}
+              className="bg-slate-800/50 p-6 rounded-xl backdrop-blur-sm border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300"
+            >
+              <div className="flex justify-between items-center mb-3">
+                <h3 className="text-lg font-semibold text-white">{skill.name}</h3>
+                <span className="text-blue-400 font-medium">{skill.level}</span>
+              </div>
+              <div className="h-2 bg-slate-700 rounded-full overflow-hidden">
+                <motion.div
+                  initial={{ width: 0 }}
+                  whileInView={{ width: skill.level }}
+                  transition={{ duration: 1, delay: 0.2 }}
+                  className="h-full bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full"
+                />
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* Development Categories */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          {[
+            { icon: <FaPalette />, title: "UI/UX Design", desc: "Creating intuitive and beautiful user interfaces with Figma" },
+            { icon: <FaCode />, title: "Frontend", desc: "Building responsive and interactive web applications" },
+            { icon: <FaServer />, title: "Backend", desc: "Developing robust server-side applications" },
+            { icon: <FaDatabase />, title: "Database", desc: "Managing data with Sanity and MongoDB" },
+            { icon: <FaBrain />, title: "AI Integration", desc: "Implementing AI features and chatbots" },
+            { icon: <FaTools />, title: "DevOps", desc: "Deployment and maintenance with modern tools" },
+          ].map((category, index) => (
+            <motion.div
+              key={index}
+              variants={itemVariants}
+              whileHover={{ scale: 1.02 }}
+              className="p-6 bg-slate-800/50 rounded-xl backdrop-blur-sm border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300"
+            >
+              <div className="text-3xl text-blue-400 mb-4">{category.icon}</div>
+              <h3 className="text-xl font-bold text-white mb-2">{category.title}</h3>
+              <p className="text-gray-400">{category.desc}</p>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );
